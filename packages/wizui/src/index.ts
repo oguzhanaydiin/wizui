@@ -1,4 +1,5 @@
 export { WButton, type WButtonProps } from "./components/WButton"
+export { WModal, type WModalProps } from "./components/WModal"
 export { WIcon, WSpinner, type IconName } from "./icons"
 export { cx } from "./utils/cx"
 export type { Color, Size, Variant } from "./types"

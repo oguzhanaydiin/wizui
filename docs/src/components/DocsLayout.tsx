@@ -1,6 +1,17 @@
 import type { ReactNode } from "react"
 
-export function DocsLayout({ children }: { children: ReactNode }) {
+const nav = [
+  { href: "/", id: "button", label: "Button" },
+  { href: "/modal", id: "modal", label: "Modal" },
+] as const
+
+export function DocsLayout({
+  children,
+  current = "button",
+}: {
+  children: ReactNode
+  current?: (typeof nav)[number]["id"]
+}) {
   return (
     <div className="min-h-dvh bg-white text-neutral-900">
       <aside className="fixed inset-y-0 left-0 hidden w-56 border-r border-neutral-200 px-4 py-6 md:block">
@@ -11,12 +22,19 @@ export function DocsLayout({ children }: { children: ReactNode }) {
           Components
         </p>
         <nav className="mt-2 space-y-0.5">
-          <a
-            href="/"
-            className="block rounded-md bg-neutral-100 px-2 py-1.5 text-sm font-medium text-neutral-900"
-          >
-            Button
-          </a>
+          {nav.map((item) => (
+            <a
+              key={item.id}
+              href={item.href}
+              className={
+                current === item.id
+                  ? "block rounded-md bg-neutral-100 px-2 py-1.5 text-sm font-medium text-neutral-900"
+                  : "block rounded-md px-2 py-1.5 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900"
+              }
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
       </aside>
       <div className="md:pl-56">
