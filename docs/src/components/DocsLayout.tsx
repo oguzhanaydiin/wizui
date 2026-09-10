@@ -15,7 +15,7 @@ export function DocsLayout({ children }: { children: ReactNode }) {
             href="/"
             className="block rounded-md bg-neutral-100 px-2 py-1.5 text-sm font-medium text-neutral-900"
           >
-            Overview
+            Button
           </a>
         </nav>
       </aside>
