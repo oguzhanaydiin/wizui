@@ -1,0 +1,9 @@
+{
+  "name": "wizui-repo",
+  "private": true,
+  "workspaces": ["packages/wizui", "docs"],
+  "scripts": {
+    "dev": "npm run dev -w docs",
+    "build": "npm run build -w docs"
+  }
+}
