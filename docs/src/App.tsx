@@ -1,10 +1,10 @@
 import { DocsLayout } from "./components/DocsLayout"
-import { HomePage } from "./pages/HomePage"
+import { ButtonPage } from "./pages/ButtonPage"
 
 export default function App() {
   return (
     <DocsLayout>
-      <HomePage />
+      <ButtonPage />
     </DocsLayout>
   )
 }
