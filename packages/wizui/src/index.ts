@@ -1,3 +1,4 @@
+export { WAlert, type WAlertProps } from "./components/WAlert"
 export { WBadge, type WBadgeProps } from "./components/WBadge"
 export { WButton, type WButtonProps } from "./components/WButton"
 export { WModal, type WModalProps } from "./components/WModal"
