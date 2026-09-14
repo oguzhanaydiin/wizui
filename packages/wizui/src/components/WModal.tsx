@@ -22,6 +22,16 @@ const sizes: Record<Size, string> = {
   xl: "max-w-2xl",
 }
 
+const line = "border-neutral-200 dark:border-neutral-800"
+
+type Divided = boolean | { header?: boolean; footer?: boolean }
+
+function resolveDivided(divided: Divided | undefined) {
+  if (divided === false) return { header: false, footer: false }
+  if (divided == null || divided === true) return { header: true, footer: true }
+  return { header: divided.header ?? true, footer: divided.footer ?? true }
+}
+
 type CloseApi = { close: () => void }
 type RenderProp = ReactNode | ((api: CloseApi) => ReactNode)
 
@@ -57,6 +67,7 @@ export interface WModalProps extends Omit<DialogHTMLAttributes<HTMLDialogElement
   close?: boolean | ReactNode
   dismissible?: boolean
   fullscreen?: boolean
+  divided?: boolean | { header?: boolean; footer?: boolean }
   size?: Size
   class?: string
   ui?: {
@@ -85,6 +96,7 @@ export function WModal({
   close = true,
   dismissible = true,
   fullscreen = false,
+  divided,
   size = "md",
   ui,
   class: classAlias,
@@ -128,6 +140,9 @@ export function WModal({
   const footerNode = footer != null ? render(footer, api) : null
   const defaultHeader = headerNode == null && (title != null || description != null)
   const showHeader = headerNode != null || defaultHeader || close === true || isValidElement(close)
+  const lines = resolveDivided(divided)
+  const headerLine = showHeader && (bodyNode != null || footerNode != null) && lines.header
+  const footerLine = footerNode != null && (showHeader || bodyNode != null) && lines.footer
 
   return (
     <>
@@ -177,7 +192,7 @@ export function WModal({
           )}
         >
           {showHeader ? (
-            <div className={cx("flex items-start gap-3 px-4 py-3", ui?.header)}>
+            <div className={cx("flex items-start gap-3 px-4 py-3", headerLine && `border-b ${line}`, ui?.header)}>
               <div className="min-w-0 flex-1 space-y-1">
                 {headerNode != null ? (
                   headerNode
@@ -212,12 +227,12 @@ export function WModal({
             </div>
           ) : null}
           {bodyNode != null ? (
-            <div className={cx("min-h-0 flex-1 overflow-y-auto px-4 py-3", defaultHeader && title != null && "pt-0", ui?.body)}>
+            <div className={cx("min-h-0 flex-1 overflow-y-auto px-4 py-3", showHeader && !headerLine && "pt-0", ui?.body)}>
               {bodyNode}
             </div>
           ) : null}
           {footerNode != null ? (
-            <div className={cx("flex justify-end gap-2 border-t border-neutral-200 px-4 py-3 dark:border-neutral-800", ui?.footer)}>
+            <div className={cx("flex justify-end gap-2 px-4 py-3", footerLine && `border-t ${line}`, ui?.footer)}>
               {footerNode}
             </div>
           ) : null}
