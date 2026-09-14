@@ -48,6 +48,25 @@ const svg = {
       <path d="M12 16h.01" />
     </>
   ),
+  chevron: <path d="m6 9 6 6 6-6" />,
+  pencil: (
+    <>
+      <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+      <path d="m15 5 4 4" />
+    </>
+  ),
+  copy: (
+    <>
+      <rect width="14" height="14" x="8" y="8" rx="2" />
+      <path d="M4 16V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2" />
+    </>
+  ),
+  user: (
+    <>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
+    </>
+  ),
 } as const
 
 export type IconName = keyof typeof svg
