@@ -5,6 +5,7 @@ const nav = [
   { href: "/badge", id: "badge", label: "Badge" },
   { href: "/alert", id: "alert", label: "Alert" },
   { href: "/modal", id: "modal", label: "Modal" },
+  { href: "/dropdown", id: "dropdown", label: "Dropdown" },
 ] as const
 
 export function DocsLayout({

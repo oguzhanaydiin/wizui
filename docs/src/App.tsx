@@ -2,6 +2,7 @@ import { DocsLayout } from "./components/DocsLayout"
 import { AlertPage } from "./pages/AlertPage"
 import { BadgePage } from "./pages/BadgePage"
 import { ButtonPage } from "./pages/ButtonPage"
+import { DropdownPage } from "./pages/DropdownPage"
 import { ModalPage } from "./pages/ModalPage"
 
 const pages = {
@@ -9,6 +10,7 @@ const pages = {
   "/modal": ModalPage,
   "/badge": BadgePage,
   "/alert": AlertPage,
+  "/dropdown": DropdownPage,
 } as const
 
 const current = {
@@ -16,6 +18,7 @@ const current = {
   "/modal": "modal",
   "/badge": "badge",
   "/alert": "alert",
+  "/dropdown": "dropdown",
 } as const
 
 export default function App() {
