@@ -4,6 +4,7 @@ const nav = [
   { href: "/", id: "button", label: "Button" },
   { href: "/badge", id: "badge", label: "Badge" },
   { href: "/alert", id: "alert", label: "Alert" },
+  { href: "/card", id: "card", label: "Card" },
   { href: "/modal", id: "modal", label: "Modal" },
   { href: "/dropdown", id: "dropdown", label: "Dropdown" },
 ] as const
