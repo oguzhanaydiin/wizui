@@ -124,6 +124,46 @@ export function ModalPage() {
         </WModal>
       </Section>
 
+      <Section
+        title="Dividers"
+        description="A line after the header and before the footer. divided={false} turns both off, or pass { header, footer }."
+      >
+        <div className="flex flex-wrap gap-2">
+          <WModal
+            title="Default"
+            description="Both lines are on."
+            trigger={<WButton variant="subtle">Both on</WButton>}
+            footer={({ close }) => (
+              <WButton onClick={close}>Done</WButton>
+            )}
+          >
+            <p className="text-sm text-neutral-600">Header and footer both get a divider.</p>
+          </WModal>
+          <WModal
+            divided={false}
+            title="None"
+            description="No lines."
+            trigger={<WButton variant="outline">Off</WButton>}
+            footer={({ close }) => (
+              <WButton onClick={close}>Done</WButton>
+            )}
+          >
+            <p className="text-sm text-neutral-600">divided=false.</p>
+          </WModal>
+          <WModal
+            divided={{ footer: false }}
+            title="Header only"
+            description="Footer line off."
+            trigger={<WButton variant="ghost">Header only</WButton>}
+            footer={({ close }) => (
+              <WButton onClick={close}>Done</WButton>
+            )}
+          >
+            <p className="text-sm text-neutral-600">Only the line under the header.</p>
+          </WModal>
+        </div>
+      </Section>
+
       <Section title="Controlled" description="open + onOpenChange when the trigger is somewhere else.">
         <ControlledDemo />
       </Section>
@@ -210,6 +250,7 @@ export function ModalPage() {
                 ["close", "boolean | ReactNode", "true"],
                 ["dismissible", "boolean", "true"],
                 ["fullscreen", "boolean", "false"],
+                ["divided", "boolean | { header?: boolean; footer?: boolean }", "true"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["className / class", "string", "—"],
                 ["ui", "{ overlay, content, header, body, footer, title, description, close }", "—"],

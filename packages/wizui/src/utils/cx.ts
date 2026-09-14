@@ -35,6 +35,9 @@ function group(core: string) {
   if (core.startsWith("ring-offset")) return "ring-offset"
   if (/^ring-(0|1|2|4|8)$/.test(core)) return "ring-width"
   if (core.startsWith("ring-")) return "ring-color"
+  if (core === "divide-y" || core === "divide-x" || core === "divide-none") return core
+  if (/^divide-(solid|dashed|dotted|double)$/.test(core)) return "divide-style"
+  if (core.startsWith("divide-")) return "divide-color"
   if (core.startsWith("rounded")) return "rounded"
   if (/^p[trblxy]?-/.test(core)) return core.match(/^p[trblxy]?/)![0]
   if (/^m[trblxy]?-/.test(core)) return core.match(/^m[trblxy]?/)![0]

@@ -2,6 +2,7 @@ import { DocsLayout } from "./components/DocsLayout"
 import { AlertPage } from "./pages/AlertPage"
 import { BadgePage } from "./pages/BadgePage"
 import { ButtonPage } from "./pages/ButtonPage"
+import { CardPage } from "./pages/CardPage"
 import { DropdownPage } from "./pages/DropdownPage"
 import { ModalPage } from "./pages/ModalPage"
 
@@ -10,6 +11,7 @@ const pages = {
   "/modal": ModalPage,
   "/badge": BadgePage,
   "/alert": AlertPage,
+  "/card": CardPage,
   "/dropdown": DropdownPage,
 } as const
 
@@ -18,6 +20,7 @@ const current = {
   "/modal": "modal",
   "/badge": "badge",
   "/alert": "alert",
+  "/card": "card",
   "/dropdown": "dropdown",
 } as const
 
