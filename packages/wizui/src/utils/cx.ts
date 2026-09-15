@@ -2,6 +2,7 @@ const PREFIXES = new Set([
   "hover",
   "focus",
   "focus-visible",
+  "focus-within",
   "active",
   "disabled",
   "dark",
@@ -12,6 +13,7 @@ const PREFIXES = new Set([
   "xl",
   "2xl",
   "motion-reduce",
+  "has-disabled",
 ])
 
 function peel(cls: string) {
