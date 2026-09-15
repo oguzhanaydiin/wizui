@@ -13,6 +13,9 @@ const PREFIXES = new Set([
   "xl",
   "2xl",
   "motion-reduce",
+  "peer-checked",
+  "peer-focus-visible",
+  "peer-disabled",
   "has-disabled",
 ])
 
