@@ -3,10 +3,13 @@ import { AlertPage } from "./pages/AlertPage"
 import { BadgePage } from "./pages/BadgePage"
 import { ButtonPage } from "./pages/ButtonPage"
 import { CardPage } from "./pages/CardPage"
+import { CheckboxPage } from "./pages/CheckboxPage"
 import { DropdownPage } from "./pages/DropdownPage"
 import { FormFieldPage } from "./pages/FormFieldPage"
 import { InputPage } from "./pages/InputPage"
 import { ModalPage } from "./pages/ModalPage"
+import { RadioGroupPage } from "./pages/RadioGroupPage"
+import { SwitchPage } from "./pages/SwitchPage"
 import { TextareaPage } from "./pages/TextareaPage"
 
 const pages = {
@@ -17,6 +20,9 @@ const pages = {
   "/card": CardPage,
   "/input": InputPage,
   "/textarea": TextareaPage,
+  "/checkbox": CheckboxPage,
+  "/switch": SwitchPage,
+  "/radio-group": RadioGroupPage,
   "/form-field": FormFieldPage,
   "/dropdown": DropdownPage,
 } as const
@@ -29,6 +35,9 @@ const current = {
   "/card": "card",
   "/input": "input",
   "/textarea": "textarea",
+  "/checkbox": "checkbox",
+  "/switch": "switch",
+  "/radio-group": "radio-group",
   "/form-field": "form-field",
   "/dropdown": "dropdown",
 } as const
