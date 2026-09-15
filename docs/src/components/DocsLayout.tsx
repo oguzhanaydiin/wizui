@@ -5,6 +5,12 @@ const nav = [
   { href: "/badge", id: "badge", label: "Badge" },
   { href: "/alert", id: "alert", label: "Alert" },
   { href: "/card", id: "card", label: "Card" },
+  { href: "/input", id: "input", label: "Input" },
+  { href: "/textarea", id: "textarea", label: "Textarea" },
+  { href: "/checkbox", id: "checkbox", label: "Checkbox" },
+  { href: "/switch", id: "switch", label: "Switch" },
+  { href: "/radio-group", id: "radio-group", label: "Radio Group" },
+  { href: "/form-field", id: "form-field", label: "Form Field" },
   { href: "/modal", id: "modal", label: "Modal" },
   { href: "/dropdown", id: "dropdown", label: "Dropdown" },
 ] as const

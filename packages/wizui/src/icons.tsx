@@ -67,6 +67,12 @@ const svg = {
       <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
     </>
   ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3-3" />
+    </>
+  ),
 } as const
 
 export type IconName = keyof typeof svg
