@@ -13,6 +13,9 @@ const nav = [
   { href: "/form-field", id: "form-field", label: "Form Field" },
   { href: "/modal", id: "modal", label: "Modal" },
   { href: "/dropdown", id: "dropdown", label: "Dropdown" },
+  { href: "/separator", id: "separator", label: "Separator" },
+  { href: "/kbd", id: "kbd", label: "Kbd" },
+  { href: "/skeleton", id: "skeleton", label: "Skeleton" },
 ] as const
 
 export function DocsLayout({

@@ -7,8 +7,11 @@ import { CheckboxPage } from "./pages/CheckboxPage"
 import { DropdownPage } from "./pages/DropdownPage"
 import { FormFieldPage } from "./pages/FormFieldPage"
 import { InputPage } from "./pages/InputPage"
+import { KbdPage } from "./pages/KbdPage"
 import { ModalPage } from "./pages/ModalPage"
 import { RadioGroupPage } from "./pages/RadioGroupPage"
+import { SeparatorPage } from "./pages/SeparatorPage"
+import { SkeletonPage } from "./pages/SkeletonPage"
 import { SwitchPage } from "./pages/SwitchPage"
 import { TextareaPage } from "./pages/TextareaPage"
 
@@ -25,6 +28,9 @@ const pages = {
   "/radio-group": RadioGroupPage,
   "/form-field": FormFieldPage,
   "/dropdown": DropdownPage,
+  "/separator": SeparatorPage,
+  "/kbd": KbdPage,
+  "/skeleton": SkeletonPage,
 } as const
 
 const current = {
@@ -40,6 +46,9 @@ const current = {
   "/radio-group": "radio-group",
   "/form-field": "form-field",
   "/dropdown": "dropdown",
+  "/separator": "separator",
+  "/kbd": "kbd",
+  "/skeleton": "skeleton",
 } as const
 
 export default function App() {
