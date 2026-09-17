@@ -33,6 +33,12 @@ export {
 } from "./components/WSeparator"
 export { WSkeleton, type WSkeletonProps } from "./components/WSkeleton"
 export { WSwitch, type WSwitchProps } from "./components/WSwitch"
+export {
+  WTable,
+  type WTableColumn,
+  type WTableProps,
+  type WTableSort,
+} from "./components/WTable"
 export { WTextarea, type WTextareaProps, type WTextareaResize } from "./components/WTextarea"
 export { WIcon, WSpinner, type IconName } from "./icons"
 export { cx } from "./utils/cx"

@@ -27,7 +27,7 @@ Same props everywhere: `color`, `variant`, `size`, `icon`, `className`.
 
 ## Components
 
-Button · Badge · Alert · Card · Input · Textarea · Checkbox · Switch · Radio Group · Form Field · Modal · Dropdown · Separator · Kbd · Skeleton
+Button · Badge · Alert · Card · Input · Textarea · Checkbox · Switch · Radio Group · Form Field · Modal · Dropdown · Separator · Kbd · Skeleton · Table · Pagination
 
 ## Docs
 

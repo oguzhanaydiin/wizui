@@ -1,19 +1,21 @@
-import { DocsLayout } from "./components/DocsLayout"
-import { AlertPage } from "./pages/AlertPage"
-import { BadgePage } from "./pages/BadgePage"
-import { ButtonPage } from "./pages/ButtonPage"
-import { CardPage } from "./pages/CardPage"
-import { CheckboxPage } from "./pages/CheckboxPage"
-import { DropdownPage } from "./pages/DropdownPage"
-import { FormFieldPage } from "./pages/FormFieldPage"
-import { InputPage } from "./pages/InputPage"
-import { KbdPage } from "./pages/KbdPage"
-import { ModalPage } from "./pages/ModalPage"
-import { RadioGroupPage } from "./pages/RadioGroupPage"
-import { SeparatorPage } from "./pages/SeparatorPage"
-import { SkeletonPage } from "./pages/SkeletonPage"
-import { SwitchPage } from "./pages/SwitchPage"
-import { TextareaPage } from "./pages/TextareaPage"
+import { DocsLayout } from "./components/DocsLayout.tsx"
+import { AlertPage } from "./pages/AlertPage.tsx"
+import { BadgePage } from "./pages/BadgePage.tsx"
+import { ButtonPage } from "./pages/ButtonPage.tsx"
+import { CardPage } from "./pages/CardPage.tsx"
+import { CheckboxPage } from "./pages/CheckboxPage.tsx"
+import { DropdownPage } from "./pages/DropdownPage.tsx"
+import { FormFieldPage } from "./pages/FormFieldPage.tsx"
+import { InputPage } from "./pages/InputPage.tsx"
+import { KbdPage } from "./pages/KbdPage.tsx"
+import { ModalPage } from "./pages/ModalPage.tsx"
+import { PaginationPage } from "./pages/PaginationPage.tsx"
+import { RadioGroupPage } from "./pages/RadioGroupPage.tsx"
+import { SeparatorPage } from "./pages/SeparatorPage.tsx"
+import { SkeletonPage } from "./pages/SkeletonPage.tsx"
+import { SwitchPage } from "./pages/SwitchPage.tsx"
+import { TablePage } from "./pages/TablePage.tsx"
+import { TextareaPage } from "./pages/TextareaPage.tsx"
 
 const pages = {
   "/": ButtonPage,
@@ -31,6 +33,8 @@ const pages = {
   "/separator": SeparatorPage,
   "/kbd": KbdPage,
   "/skeleton": SkeletonPage,
+  "/table": TablePage,
+  "/pagination": PaginationPage,
 } as const
 
 const current = {
@@ -49,6 +53,8 @@ const current = {
   "/separator": "separator",
   "/kbd": "kbd",
   "/skeleton": "skeleton",
+  "/table": "table",
+  "/pagination": "pagination",
 } as const
 
 export default function App() {
