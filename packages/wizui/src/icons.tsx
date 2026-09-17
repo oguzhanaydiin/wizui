@@ -7,6 +7,7 @@ const svg = {
       <path d="M12 5v14" />
     </>
   ),
+  minus: <path d="M5 12h14" />,
   check: <path d="M20 6 9 17l-5-5" />,
   mail: (
     <>

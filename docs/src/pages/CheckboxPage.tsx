@@ -14,6 +14,35 @@ function TermsDemo() {
   )
 }
 
+function MixedDemo() {
+  const [a, setA] = useState(true)
+  const [b, setB] = useState(false)
+  const all = a && b
+  const mixed = a !== b
+
+  return (
+    <div className="grid gap-2">
+      <WCheckbox
+        checked={all}
+        indeterminate={mixed}
+        onChange={(event) => {
+          const next = event.target.checked
+          setA(next)
+          setB(next)
+        }}
+      >
+        Select all
+      </WCheckbox>
+      <WCheckbox className="ml-6" checked={a} onChange={(event) => setA(event.target.checked)}>
+        Billing emails
+      </WCheckbox>
+      <WCheckbox className="ml-6" checked={b} onChange={(event) => setB(event.target.checked)}>
+        Product emails
+      </WCheckbox>
+    </div>
+  )
+}
+
 const colors = ["primary", "secondary", "success", "info", "warning", "error", "neutral"] as const
 
 export function CheckboxPage() {
@@ -34,6 +63,10 @@ export function CheckboxPage() {
 
       <Section title="Usage">
         <WCheckbox defaultChecked>Subscribe to product emails</WCheckbox>
+      </Section>
+
+      <Section title="Indeterminate" description="Some children on, some off. Native mixed state — a dash, not a third value.">
+        <MixedDemo />
       </Section>
 
       <Section title="Colors">
@@ -84,6 +117,7 @@ export function CheckboxPage() {
               {[
                 ["color", "primary | secondary | success | info | warning | error | neutral", "primary"],
                 ["size", "xs | sm | md | lg | xl", "md"],
+                ["indeterminate", "boolean", "false"],
                 ["children", "ReactNode", "label"],
                 ["className / class", "string", "—"],
               ].map(([prop, type, fallback]) => (

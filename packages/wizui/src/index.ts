@@ -15,6 +15,11 @@ export { WInput, type WInputProps } from "./components/WInput"
 export { WKbd, getKbdKey, type KbdKey, type WKbdProps } from "./components/WKbd"
 export { WModal, type WModalProps } from "./components/WModal"
 export {
+  WPagination,
+  type WPaginationItem,
+  type WPaginationProps,
+} from "./components/WPagination"
+export {
   WRadioGroup,
   type WRadioGroupProps,
   type WRadioItem,
@@ -28,6 +33,12 @@ export {
 } from "./components/WSeparator"
 export { WSkeleton, type WSkeletonProps } from "./components/WSkeleton"
 export { WSwitch, type WSwitchProps } from "./components/WSwitch"
+export {
+  WTable,
+  type WTableColumn,
+  type WTableProps,
+  type WTableSort,
+} from "./components/WTable"
 export { WTextarea, type WTextareaProps, type WTextareaResize } from "./components/WTextarea"
 export { WIcon, WSpinner, type IconName } from "./icons"
 export { cx } from "./utils/cx"
