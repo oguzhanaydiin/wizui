@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes, ReactNode } from "react"
+import { useLayoutEffect, useRef, type InputHTMLAttributes, type ReactNode } from "react"
 import { WIcon } from "../icons"
 import type { Color, Size } from "../types"
 import { cx } from "../utils/cx"
@@ -30,9 +30,20 @@ const checked: Record<Color, string> = {
   neutral: "peer-checked:bg-neutral-900 peer-checked:ring-neutral-900 dark:peer-checked:bg-white dark:peer-checked:ring-white",
 }
 
+const mixed: Record<Color, string> = {
+  primary: "bg-primary-500 ring-primary-500",
+  secondary: "bg-secondary-500 ring-secondary-500",
+  success: "bg-success-500 ring-success-500",
+  info: "bg-info-500 ring-info-500",
+  warning: "bg-warning-500 ring-warning-500",
+  error: "bg-error-500 ring-error-500",
+  neutral: "bg-neutral-900 ring-neutral-900 dark:bg-white dark:ring-white",
+}
+
 export interface WCheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "type"> {
   color?: Color
   size?: Size
+  indeterminate?: boolean
   class?: string
   ui?: { root?: string; base?: string; label?: string }
   children?: ReactNode
@@ -41,6 +52,7 @@ export interface WCheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElemen
 export function WCheckbox({
   color,
   size,
+  indeterminate,
   ui,
   class: classAlias,
   className,
@@ -52,11 +64,17 @@ export function WCheckbox({
   ...props
 }: WCheckboxProps) {
   const field = useFormField()
+  const inputRef = useRef<HTMLInputElement>(null)
   const resolvedColor = color ?? (field?.error ? "error" : "primary")
   const resolvedSize = size ?? field?.size ?? "md"
   const inputId = id ?? field?.id
   const inputName = name ?? field?.name
   const inputRequired = required ?? field?.required
+  const isMixed = Boolean(indeterminate)
+
+  useLayoutEffect(() => {
+    if (inputRef.current) inputRef.current.indeterminate = isMixed
+  }, [isMixed])
 
   return (
     <label
@@ -71,27 +89,30 @@ export function WCheckbox({
       <span className="relative inline-flex shrink-0">
         <input
           {...props}
+          ref={inputRef}
           id={inputId}
           name={inputName}
           type="checkbox"
           required={inputRequired || undefined}
           disabled={disabled}
           aria-invalid={field?.error || undefined}
+          aria-checked={isMixed ? "mixed" : undefined}
           aria-describedby={field?.describedBy}
           className="peer sr-only"
         />
         <span
           className={cx(
-            "inline-flex items-center justify-center ring-1 ring-inset ring-neutral-300 transition-colors",
+            "pointer-events-none inline-flex items-center justify-center ring-1 ring-inset ring-neutral-300 transition-colors",
             "peer-focus-visible:ring-2 dark:ring-neutral-600",
-            "[&_svg]:opacity-0 peer-checked:[&_svg]:opacity-100",
+            isMixed ? "[&_svg]:opacity-100" : "[&_svg]:opacity-0 peer-checked:[&_svg]:opacity-100",
             box[resolvedSize],
             checked[resolvedColor],
+            isMixed && mixed[resolvedColor],
             ui?.base,
           )}
         >
           <WIcon
-            name="check"
+            name={isMixed ? "minus" : "check"}
             className={cx(
               icon[resolvedSize],
               resolvedColor === "neutral" ? "text-white dark:text-neutral-900" : "text-white",
