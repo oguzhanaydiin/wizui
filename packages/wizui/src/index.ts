@@ -3,6 +3,7 @@ export { WBadge, type WBadgeProps } from "./components/WBadge"
 export { WButton, type WButtonProps } from "./components/WButton"
 export { WCard, type WCardProps, type WCardVariant } from "./components/WCard"
 export { WCheckbox, type WCheckboxProps } from "./components/WCheckbox"
+export { WCodeBlock, type WCodeBlockProps, type WCodeBlockVariant } from "./components/WCodeBlock"
 export {
   WDropdown,
   type WDropdownItem,
