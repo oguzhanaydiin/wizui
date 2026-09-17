@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import { WCodeBlock } from "wizui"
 
 const nav = [
   { href: "/alert", id: "alert", label: "Alert" },
@@ -6,6 +7,7 @@ const nav = [
   { href: "/", id: "button", label: "Button" },
   { href: "/card", id: "card", label: "Card" },
   { href: "/checkbox", id: "checkbox", label: "Checkbox" },
+  { href: "/code-block", id: "code-block", label: "Code Block" },
   { href: "/dropdown", id: "dropdown", label: "Dropdown" },
   { href: "/form-field", id: "form-field", label: "Form Field" },
   { href: "/input", id: "input", label: "Input" },
@@ -83,9 +85,5 @@ export function Section({
 }
 
 export function Code({ children }: { children: string }) {
-  return (
-    <pre className="overflow-x-auto rounded-lg border border-neutral-200 bg-neutral-950 p-4 text-[13px] leading-6 text-neutral-100">
-      <code>{children}</code>
-    </pre>
-  )
+  return <WCodeBlock hideHeader language="tsx" code={children} />
 }

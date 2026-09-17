@@ -4,6 +4,7 @@ import { BadgePage } from "./pages/BadgePage.tsx"
 import { ButtonPage } from "./pages/ButtonPage.tsx"
 import { CardPage } from "./pages/CardPage.tsx"
 import { CheckboxPage } from "./pages/CheckboxPage.tsx"
+import { CodeBlockPage } from "./pages/CodeBlockPage.tsx"
 import { DropdownPage } from "./pages/DropdownPage.tsx"
 import { FormFieldPage } from "./pages/FormFieldPage.tsx"
 import { InputPage } from "./pages/InputPage.tsx"
@@ -26,6 +27,7 @@ const pages = {
   "/input": InputPage,
   "/textarea": TextareaPage,
   "/checkbox": CheckboxPage,
+  "/code-block": CodeBlockPage,
   "/switch": SwitchPage,
   "/radio-group": RadioGroupPage,
   "/form-field": FormFieldPage,
@@ -46,6 +48,7 @@ const current = {
   "/input": "input",
   "/textarea": "textarea",
   "/checkbox": "checkbox",
+  "/code-block": "code-block",
   "/switch": "switch",
   "/radio-group": "radio-group",
   "/form-field": "form-field",
