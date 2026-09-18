@@ -1,4 +1,5 @@
 export { WAlert, type WAlertProps } from "./components/WAlert"
+export { WAvatar, type WAvatarProps } from "./components/WAvatar"
 export { WBadge, type WBadgeProps } from "./components/WBadge"
 export { WButton, type WButtonProps } from "./components/WButton"
 export { WCard, type WCardProps, type WCardVariant } from "./components/WCard"
@@ -21,6 +22,11 @@ export {
   type WPaginationProps,
 } from "./components/WPagination"
 export {
+  WPopover,
+  type WPopoverMode,
+  type WPopoverProps,
+} from "./components/WPopover"
+export {
   WRadioGroup,
   type WRadioGroupProps,
   type WRadioItem,
@@ -41,6 +47,8 @@ export {
   type WTableSort,
 } from "./components/WTable"
 export { WTextarea, type WTextareaProps, type WTextareaResize } from "./components/WTextarea"
+export { WTooltip, type WTooltipProps } from "./components/WTooltip"
 export { WIcon, WSpinner, type IconName } from "./icons"
 export { cx } from "./utils/cx"
+export type { WPlacement } from "./utils/place"
 export type { Color, Size, Variant } from "./types"
