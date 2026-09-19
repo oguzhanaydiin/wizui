@@ -3,6 +3,7 @@ import { WCodeBlock } from "wizui"
 
 const nav = [
   { href: "/alert", id: "alert", label: "Alert" },
+  { href: "/avatar", id: "avatar", label: "Avatar" },
   { href: "/badge", id: "badge", label: "Badge" },
   { href: "/", id: "button", label: "Button" },
   { href: "/card", id: "card", label: "Card" },
@@ -14,12 +15,14 @@ const nav = [
   { href: "/kbd", id: "kbd", label: "Kbd" },
   { href: "/modal", id: "modal", label: "Modal" },
   { href: "/pagination", id: "pagination", label: "Pagination" },
+  { href: "/popover", id: "popover", label: "Popover" },
   { href: "/radio-group", id: "radio-group", label: "Radio Group" },
   { href: "/separator", id: "separator", label: "Separator" },
   { href: "/skeleton", id: "skeleton", label: "Skeleton" },
   { href: "/switch", id: "switch", label: "Switch" },
   { href: "/table", id: "table", label: "Table" },
   { href: "/textarea", id: "textarea", label: "Textarea" },
+  { href: "/tooltip", id: "tooltip", label: "Tooltip" },
 ] as const
 
 export function DocsLayout({
