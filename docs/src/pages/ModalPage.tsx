@@ -39,7 +39,7 @@ export function ModalPage() {
           <code className="text-neutral-800">trigger</code> and skip state, or control it with{" "}
           <code className="text-neutral-800">open</code>.{" "}
           <code className="text-neutral-800">header</code>, <code className="text-neutral-800">body</code>,{" "}
-          <code className="text-neutral-800">footer</code> replace the defaults — same as Vue slots.
+          <code className="text-neutral-800">footer</code> replace the defaults. Same as Vue slots.
         </p>
       </header>
 
@@ -60,7 +60,7 @@ export function ModalPage() {
         </WModal>
       </Section>
 
-      <Section title="Slots" description="header, body, footer — Vue named slots. title / children are the defaults.">
+      <Section title="Slots" description="header, body, footer. Vue named slots. title / children are the defaults.">
         <WModal
           trigger={<WButton variant="subtle">header + body + footer</WButton>}
           header={
@@ -237,23 +237,23 @@ export function ModalPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["trigger", "ReactNode", "—"],
+                ["trigger", "ReactNode", "-"],
                 ["title", "ReactNode", "default header"],
                 ["description", "ReactNode", "default header"],
                 ["header", "ReactNode | ({ close }) => ReactNode", "title + description"],
                 ["body", "ReactNode | ({ close }) => ReactNode", "children"],
-                ["footer", "ReactNode | ({ close }) => ReactNode", "—"],
+                ["footer", "ReactNode | ({ close }) => ReactNode", "-"],
                 ["children", "ReactNode | ({ close }) => ReactNode", "body"],
-                ["open", "boolean", "—"],
+                ["open", "boolean", "-"],
                 ["defaultOpen", "boolean", "false"],
-                ["onOpenChange", "(open: boolean) => void", "—"],
+                ["onOpenChange", "(open: boolean) => void", "-"],
                 ["close", "boolean | ReactNode", "true"],
                 ["dismissible", "boolean", "true"],
                 ["fullscreen", "boolean", "false"],
                 ["divided", "boolean | { header?: boolean; footer?: boolean }", "true"],
                 ["size", "xs | sm | md | lg | xl", "md"],
-                ["className / class", "string", "—"],
-                ["ui", "{ overlay, content, header, body, footer, title, description, close }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ overlay, content, header, body, footer, title, description, close }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

@@ -37,7 +37,7 @@ export function AlertPage() {
           <code className="text-neutral-800">title</code> and{" "}
           <code className="text-neutral-800">description</code> are the defaults.{" "}
           <code className="text-neutral-800">header</code>, <code className="text-neutral-800">body</code>,{" "}
-          <code className="text-neutral-800">footer</code> replace them — same as Vue slots.
+          <code className="text-neutral-800">footer</code> replace them. Same as Vue slots.
         </p>
       </header>
 
@@ -73,7 +73,7 @@ export function AlertPage() {
         <CloseDemo />
       </Section>
 
-      <Section title="Slots" description="header, body, footer — Vue named slots. title / children are the defaults.">
+      <Section title="Slots" description="header, body, footer. Vue named slots. title / children are the defaults.">
         <WAlert
           color="info"
           header={
@@ -126,15 +126,15 @@ export function AlertPage() {
                 ["title", "ReactNode", "default header"],
                 ["description", "ReactNode", "default header"],
                 ["icon", "IconName | ReactNode | false", "from color"],
-                ["leading", "ReactNode", "—"],
+                ["leading", "ReactNode", "-"],
                 ["header", "ReactNode | ({ close }) => ReactNode", "title + description"],
                 ["body", "ReactNode | ({ close }) => ReactNode", "children"],
-                ["footer", "ReactNode | ({ close }) => ReactNode", "—"],
+                ["footer", "ReactNode | ({ close }) => ReactNode", "-"],
                 ["children", "ReactNode | ({ close }) => ReactNode", "body"],
                 ["close", "boolean | ReactNode", "false"],
-                ["onClose", "() => void", "—"],
-                ["className / class", "string", "—"],
-                ["ui", "{ base, leadingIcon, header, title, description, body, footer, close }", "—"],
+                ["onClose", "() => void", "-"],
+                ["className / class", "string", "-"],
+                ["ui", "{ base, leadingIcon, header, title, description, body, footer, close }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

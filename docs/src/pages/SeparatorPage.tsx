@@ -107,12 +107,12 @@ export function SeparatorPage() {
                 ["type", "solid | dashed | dotted", "solid"],
                 ["orientation", "horizontal | vertical", "horizontal"],
                 ["position", "start | center | end", "center"],
-                ["label", "string", "—"],
-                ["icon", "IconName | ReactNode", "—"],
+                ["label", "string", "-"],
+                ["icon", "IconName | ReactNode", "-"],
                 ["decorative", "boolean", "false"],
                 ["children", "ReactNode", "label / icon"],
-                ["className / class", "string", "—"],
-                ["ui", "{ base, border, container, icon, label }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ base, border, container, icon, label }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

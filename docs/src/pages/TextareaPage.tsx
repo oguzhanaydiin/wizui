@@ -87,13 +87,13 @@ export function TextareaPage() {
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["rows", "number", "3"],
                 ["resize", "none | y | x | both", "y"],
-                ["icon", "IconName | ReactNode", "—"],
-                ["trailingIcon", "IconName | ReactNode", "—"],
-                ["leading", "ReactNode", "—"],
-                ["trailing", "ReactNode", "—"],
+                ["icon", "IconName | ReactNode", "-"],
+                ["trailingIcon", "IconName | ReactNode", "-"],
+                ["leading", "ReactNode", "-"],
+                ["trailing", "ReactNode", "-"],
                 ["loading", "boolean", "false"],
                 ["highlight", "boolean", "false"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

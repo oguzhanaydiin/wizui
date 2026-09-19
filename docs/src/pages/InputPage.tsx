@@ -103,7 +103,7 @@ export function InputPage() {
         </div>
       </Section>
 
-      <Section title="Trailing" description="Pass a node — a clear button, a password toggle.">
+      <Section title="Trailing" description="Pass a node: a clear button, a password toggle.">
         <div className="max-w-sm space-y-2">
           <ClearDemo />
           <PasswordDemo />
@@ -158,15 +158,15 @@ export function InputPage() {
                 ["color", "primary | secondary | success | info | warning | error | neutral", "primary"],
                 ["variant", "solid | subtle | outline | ghost | link", "outline"],
                 ["size", "xs | sm | md | lg | xl", "md"],
-                ["icon", "IconName | ReactNode", "—"],
-                ["trailingIcon", "IconName | ReactNode", "—"],
-                ["leading", "ReactNode", "—"],
-                ["trailing", "ReactNode", "—"],
+                ["icon", "IconName | ReactNode", "-"],
+                ["trailingIcon", "IconName | ReactNode", "-"],
+                ["leading", "ReactNode", "-"],
+                ["trailing", "ReactNode", "-"],
                 ["loading", "boolean", "false"],
-                ["loadingIcon", "IconName | ReactNode", "—"],
+                ["loadingIcon", "IconName | ReactNode", "-"],
                 ["highlight", "boolean", "false"],
-                ["className / class", "string", "—"],
-                ["ui", "{ root, base, leading, trailing, leadingIcon, trailingIcon }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ root, base, leading, trailing, leadingIcon, trailingIcon }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

@@ -85,7 +85,7 @@ export function SwitchPage() {
                 ["color", "primary | secondary | success | info | warning | error | neutral", "primary"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["children", "ReactNode", "label"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

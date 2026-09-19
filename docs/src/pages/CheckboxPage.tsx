@@ -65,7 +65,7 @@ export function CheckboxPage() {
         <WCheckbox defaultChecked>Subscribe to product emails</WCheckbox>
       </Section>
 
-      <Section title="Indeterminate" description="Some children on, some off. Native mixed state — a dash, not a third value.">
+      <Section title="Indeterminate" description="Some children on, some off. Native mixed state: a dash, not a third value.">
         <MixedDemo />
       </Section>
 
@@ -98,7 +98,7 @@ export function CheckboxPage() {
         </div>
       </Section>
 
-      <Section title="With FormField" description="Skip the field label — the checkbox children are the label. error still paints it.">
+      <Section title="With FormField" description="Skip the field label. The checkbox children are the label. error still paints it.">
         <TermsDemo />
       </Section>
 
@@ -119,7 +119,7 @@ export function CheckboxPage() {
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["indeterminate", "boolean", "false"],
                 ["children", "ReactNode", "label"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

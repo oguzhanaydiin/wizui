@@ -1,3 +1,4 @@
+import { WizProvider } from "wizui"
 import { DocsLayout } from "./components/DocsLayout.tsx"
 import { AlertPage } from "./pages/AlertPage.tsx"
 import { AvatarPage } from "./pages/AvatarPage.tsx"
@@ -13,12 +14,15 @@ import { KbdPage } from "./pages/KbdPage.tsx"
 import { ModalPage } from "./pages/ModalPage.tsx"
 import { PaginationPage } from "./pages/PaginationPage.tsx"
 import { PopoverPage } from "./pages/PopoverPage.tsx"
+import { ProgressPage } from "./pages/ProgressPage.tsx"
 import { RadioGroupPage } from "./pages/RadioGroupPage.tsx"
 import { SeparatorPage } from "./pages/SeparatorPage.tsx"
 import { SkeletonPage } from "./pages/SkeletonPage.tsx"
+import { SlideoverPage } from "./pages/SlideoverPage.tsx"
 import { SwitchPage } from "./pages/SwitchPage.tsx"
 import { TablePage } from "./pages/TablePage.tsx"
 import { TextareaPage } from "./pages/TextareaPage.tsx"
+import { ToastPage } from "./pages/ToastPage.tsx"
 import { TooltipPage } from "./pages/TooltipPage.tsx"
 
 const pages = {
@@ -39,9 +43,12 @@ const pages = {
   "/separator": SeparatorPage,
   "/kbd": KbdPage,
   "/skeleton": SkeletonPage,
+  "/slideover": SlideoverPage,
   "/table": TablePage,
   "/pagination": PaginationPage,
   "/popover": PopoverPage,
+  "/progress": ProgressPage,
+  "/toast": ToastPage,
   "/tooltip": TooltipPage,
 } as const
 
@@ -63,9 +70,12 @@ const current = {
   "/separator": "separator",
   "/kbd": "kbd",
   "/skeleton": "skeleton",
+  "/slideover": "slideover",
   "/table": "table",
   "/pagination": "pagination",
   "/popover": "popover",
+  "/progress": "progress",
+  "/toast": "toast",
   "/tooltip": "tooltip",
 } as const
 
@@ -75,8 +85,10 @@ export default function App() {
   const nav = path in current ? current[path as keyof typeof current] : "button"
 
   return (
-    <DocsLayout current={nav}>
-      <Page />
-    </DocsLayout>
+    <WizProvider>
+      <DocsLayout current={nav}>
+        <Page />
+      </DocsLayout>
+    </WizProvider>
   )
 }

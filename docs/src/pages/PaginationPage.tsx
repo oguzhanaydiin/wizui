@@ -83,7 +83,7 @@ export function PaginationPage() {
                 ["activeColor / activeVariant", "same as Button", "primary / solid"],
                 ["size", "xs | sm | md | lg | xl", "sm"],
                 ["disabled", "boolean", "false"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

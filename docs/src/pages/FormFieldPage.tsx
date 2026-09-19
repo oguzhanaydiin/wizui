@@ -26,7 +26,7 @@ export function FormFieldPage() {
         <h1 className="text-3xl font-semibold tracking-tight">Form Field</h1>
         <p className="text-neutral-500">
           Label, hint, help, error around any control. Wraps{" "}
-          <code className="text-neutral-800">WInput</code> without extra ids — the field owns{" "}
+          <code className="text-neutral-800">WInput</code> without extra ids. The field owns{" "}
           <code className="text-neutral-800">htmlFor</code>.{" "}
           <code className="text-neutral-800">error</code> paints the input error and replaces help.
         </p>
@@ -136,17 +136,17 @@ export function FormFieldPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["label", "ReactNode", "—"],
-                ["description", "ReactNode", "—"],
-                ["hint", "ReactNode", "—"],
-                ["help", "ReactNode", "—"],
-                ["error", "ReactNode | boolean", "—"],
+                ["label", "ReactNode", "-"],
+                ["description", "ReactNode", "-"],
+                ["hint", "ReactNode", "-"],
+                ["help", "ReactNode", "-"],
+                ["error", "ReactNode | boolean", "-"],
                 ["required", "boolean", "false"],
-                ["name", "string", "—"],
+                ["name", "string", "-"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["orientation", "vertical | horizontal", "vertical"],
-                ["className / class", "string", "—"],
-                ["ui", "{ base, wrapper, label, hint, description, container, error, help }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ base, wrapper, label, hint, description, container, error, help }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

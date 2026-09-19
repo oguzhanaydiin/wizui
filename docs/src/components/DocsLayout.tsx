@@ -16,12 +16,15 @@ const nav = [
   { href: "/modal", id: "modal", label: "Modal" },
   { href: "/pagination", id: "pagination", label: "Pagination" },
   { href: "/popover", id: "popover", label: "Popover" },
+  { href: "/progress", id: "progress", label: "Progress" },
   { href: "/radio-group", id: "radio-group", label: "Radio Group" },
   { href: "/separator", id: "separator", label: "Separator" },
   { href: "/skeleton", id: "skeleton", label: "Skeleton" },
+  { href: "/slideover", id: "slideover", label: "Slideover" },
   { href: "/switch", id: "switch", label: "Switch" },
   { href: "/table", id: "table", label: "Table" },
   { href: "/textarea", id: "textarea", label: "Textarea" },
+  { href: "/toast", id: "toast", label: "Toast" },
   { href: "/tooltip", id: "tooltip", label: "Tooltip" },
 ] as const
 
