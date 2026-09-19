@@ -92,3 +92,40 @@
     cursor: pointer;
   }
 }
+
+@keyframes w-toast-progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes w-progress-carousel {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+@keyframes w-progress-carousel-y {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(400%);
+  }
+}
+
+.wiz-slideover-panel {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wiz-slideover-panel {
+    transition: none;
+  }
+}

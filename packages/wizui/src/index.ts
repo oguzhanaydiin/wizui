@@ -26,6 +26,7 @@ export {
   type WPopoverMode,
   type WPopoverProps,
 } from "./components/WPopover"
+export { WProgress, type WProgressProps } from "./components/WProgress"
 export {
   WRadioGroup,
   type WRadioGroupProps,
@@ -39,6 +40,7 @@ export {
   type WSeparatorType,
 } from "./components/WSeparator"
 export { WSkeleton, type WSkeletonProps } from "./components/WSkeleton"
+export { WSlideover, type WSlideoverProps, type WSlideoverSide } from "./components/WSlideover"
 export { WSwitch, type WSwitchProps } from "./components/WSwitch"
 export {
   WTable,
@@ -47,7 +49,21 @@ export {
   type WTableSort,
 } from "./components/WTable"
 export { WTextarea, type WTextareaProps, type WTextareaResize } from "./components/WTextarea"
+export { WToast, type WToastProps } from "./components/WToast"
 export { WTooltip, type WTooltipProps } from "./components/WTooltip"
+export { WizProvider, type WizProviderProps } from "./overlay/WizProvider"
+export { confirm, type ConfirmOptions } from "./overlay/confirm"
+export {
+  createOverlay,
+  toast,
+  useOverlay,
+  useToast,
+  type OverlayClose,
+  type ToastAction,
+  type ToastInput,
+  type ToastPosition,
+  type ToastRecord,
+} from "./overlay/hooks"
 export { WIcon, WSpinner, type IconName } from "./icons"
 export { cx } from "./utils/cx"
 export type { WPlacement } from "./utils/place"
