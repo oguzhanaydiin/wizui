@@ -1,18 +1,23 @@
 import type { ReactNode } from "react"
-import { WCodeBlock } from "wizui"
+import { WCodeBlock, WLink } from "wizui"
 
 const nav = [
   { href: "/alert", id: "alert", label: "Alert" },
   { href: "/avatar", id: "avatar", label: "Avatar" },
+  { href: "/avatar-group", id: "avatar-group", label: "Avatar Group" },
   { href: "/badge", id: "badge", label: "Badge" },
   { href: "/", id: "button", label: "Button" },
+  { href: "/button-group", id: "button-group", label: "Button Group" },
   { href: "/card", id: "card", label: "Card" },
   { href: "/checkbox", id: "checkbox", label: "Checkbox" },
+  { href: "/chip", id: "chip", label: "Chip" },
   { href: "/code-block", id: "code-block", label: "Code Block" },
+  { href: "/container", id: "container", label: "Container" },
   { href: "/dropdown", id: "dropdown", label: "Dropdown" },
   { href: "/form-field", id: "form-field", label: "Form Field" },
   { href: "/input", id: "input", label: "Input" },
   { href: "/kbd", id: "kbd", label: "Kbd" },
+  { href: "/link", id: "link", label: "Link" },
   { href: "/modal", id: "modal", label: "Modal" },
   { href: "/pagination", id: "pagination", label: "Pagination" },
   { href: "/popover", id: "popover", label: "Popover" },
@@ -38,25 +43,25 @@ export function DocsLayout({
   return (
     <div className="min-h-dvh bg-white text-neutral-900">
       <aside className="fixed inset-y-0 left-0 hidden w-56 border-r border-neutral-200 px-4 py-6 md:block">
-        <a href="/" className="px-2 text-sm font-semibold tracking-tight">
+        <WLink raw href="/" className="px-2 text-sm font-semibold tracking-tight text-neutral-900">
           wizui
-        </a>
+        </WLink>
         <p className="mt-6 px-2 text-xs font-medium uppercase tracking-wide text-neutral-400">
           Components
         </p>
         <nav className="mt-2 space-y-0.5">
           {nav.map((item) => (
-            <a
+            <WLink
               key={item.id}
+              raw
               href={item.href}
-              className={
-                current === item.id
-                  ? "block rounded-md bg-neutral-100 px-2 py-1.5 text-sm font-medium text-neutral-900"
-                  : "block rounded-md px-2 py-1.5 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900"
-              }
+              active={current === item.id}
+              className="block px-2 py-1.5 text-sm"
+              activeClass="rounded-md bg-neutral-100 font-medium text-neutral-900"
+              inactiveClass="rounded-md text-neutral-600 hover:bg-neutral-50 hover:text-neutral-900"
             >
               {item.label}
-            </a>
+            </WLink>
           ))}
         </nav>
       </aside>
