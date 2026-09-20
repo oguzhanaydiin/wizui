@@ -107,7 +107,7 @@ export function PopoverPage() {
         </WPopover>
       </Section>
 
-      <Section title="Close" description="content={({ close }) => ...} — same as Modal footer.">
+      <Section title="Close" description="content={({ close }) => ...}. Same as Modal footer.">
         <CloseDemo />
       </Section>
 
@@ -154,18 +154,18 @@ export function PopoverPage() {
             <tbody className="divide-y divide-neutral-200">
               {[
                 ["trigger / children", "ReactNode", "trigger"],
-                ["content", "ReactNode | ({ close }) => ReactNode", "—"],
-                ["open", "boolean", "—"],
+                ["content", "ReactNode | ({ close }) => ReactNode", "-"],
+                ["open", "boolean", "-"],
                 ["defaultOpen", "boolean", "false"],
-                ["onOpenChange", "(open: boolean) => void", "—"],
+                ["onOpenChange", "(open: boolean) => void", "-"],
                 ["mode", "click | hover", "click"],
                 ["placement", "top | right | bottom | left + -start/-end", "bottom"],
                 ["openDelay", "number", "0"],
                 ["closeDelay", "number", "0"],
                 ["dismissible", "boolean", "true"],
                 ["disabled", "boolean", "false"],
-                ["className / class", "string", "—"],
-                ["ui", "{ trigger, content }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ trigger, content }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

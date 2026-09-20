@@ -21,7 +21,7 @@ export function CodeBlockPage() {
           Native{" "}
           <code className="text-neutral-800">pre</code> /{" "}
           <code className="text-neutral-800">code</code>. Default is{" "}
-          <code className="text-neutral-800">subtle</code> — gray on light, dark on dark.{" "}
+          <code className="text-neutral-800">subtle</code>: gray on light, dark on dark.{" "}
           <code className="text-neutral-800">solid</code> is always the black block.{" "}
           <code className="text-neutral-800">js</code> /{" "}
           <code className="text-neutral-800">jsx</code> /{" "}
@@ -90,17 +90,17 @@ export function CodeBlockPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["code / children", "string", "—"],
+                ["code / children", "string", "-"],
                 ["language", "string", "js | jsx | ts | tsx color tokens"],
-                ["filename", "string", "—"],
-                ["highlights", "number[]", "—"],
+                ["filename", "string", "-"],
+                ["highlights", "number[]", "-"],
                 ["hideHeader", "boolean", "false"],
                 ["variant", "subtle | solid", "subtle"],
                 ["copy", "boolean", "true"],
-                ["icon", "IconName | ReactNode", "—"],
+                ["icon", "IconName | ReactNode", "-"],
                 ["size", "xs | sm | md | lg | xl", "md"],
-                ["className / class", "string", "—"],
-                ["ui", "{ root, header, filename, icon, copy, base, line, highlight }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ root, header, filename, icon, copy, base, line, highlight }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

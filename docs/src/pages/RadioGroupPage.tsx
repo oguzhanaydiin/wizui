@@ -30,7 +30,7 @@ export function RadioGroupPage() {
         <p className="text-xs font-medium uppercase tracking-wide text-neutral-400">Components</p>
         <h1 className="text-3xl font-semibold tracking-tight">Radio Group</h1>
         <p className="text-neutral-500">
-          Native radios. Pass <code className="text-neutral-800">items</code>, skip state — or control{" "}
+          Native radios. Pass <code className="text-neutral-800">items</code>, skip state, or control{" "}
           <code className="text-neutral-800">value</code>. Same{" "}
           <code className="text-neutral-800">color</code>,{" "}
           <code className="text-neutral-800">size</code>,{" "}
@@ -96,13 +96,13 @@ export function RadioGroupPage() {
             <tbody className="divide-y divide-neutral-200">
               {[
                 ["items", "WRadioItem[]", "[]"],
-                ["value", "string", "—"],
-                ["defaultValue", "string", "—"],
+                ["value", "string", "-"],
+                ["defaultValue", "string", "-"],
                 ["color", "primary | secondary | success | info | warning | error | neutral", "primary"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["orientation", "vertical | horizontal", "vertical"],
                 ["name", "string", "from FormField or generated"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>
@@ -124,9 +124,9 @@ export function RadioGroupPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["label", "ReactNode", "—"],
-                ["value", "string", "—"],
-                ["description", "ReactNode", "—"],
+                ["label", "ReactNode", "-"],
+                ["value", "string", "-"],
+                ["description", "ReactNode", "-"],
                 ["disabled", "boolean", "false"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>

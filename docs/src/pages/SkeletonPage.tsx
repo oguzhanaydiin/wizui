@@ -72,8 +72,8 @@ export function SkeletonPage() {
             <tbody className="divide-y divide-neutral-200">
               {[
                 ["className / class", "string", "size and shape"],
-                ["ui", "{ base }", "—"],
-                ["children", "ReactNode", "—"],
+                ["ui", "{ base }", "-"],
+                ["children", "ReactNode", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

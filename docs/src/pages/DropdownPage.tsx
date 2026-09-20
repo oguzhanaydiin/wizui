@@ -13,7 +13,7 @@ const grouped: WDropdownItem[][] = [
 ]
 
 function UsageDemo() {
-  const [last, setLast] = useState("—")
+  const [last, setLast] = useState("-")
   const items: WDropdownItem[][] = grouped.map((group) =>
     group.map((item) => ({
       ...item,
@@ -231,14 +231,14 @@ export function DropdownPage() {
               {[
                 ["items", "WDropdownItem[] | WDropdownItem[][]", "[]"],
                 ["trigger / children", "ReactNode", "trigger"],
-                ["open", "boolean", "—"],
+                ["open", "boolean", "-"],
                 ["defaultOpen", "boolean", "false"],
-                ["onOpenChange", "(open: boolean) => void", "—"],
+                ["onOpenChange", "(open: boolean) => void", "-"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["placement", "bottom-start | bottom-end | top-start | top-end", "bottom-start"],
                 ["item", "({ item }) => ReactNode", "label + icon"],
-                ["className / class", "string", "—"],
-                ["ui", "{ trigger, content, group, item, itemLeadingIcon, itemLabel, itemTrailing, separator, shortcuts }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ trigger, content, group, item, itemLeadingIcon, itemLabel, itemTrailing, separator, shortcuts }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>
@@ -260,17 +260,17 @@ export function DropdownPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["label", "ReactNode", "—"],
-                ["icon", "IconName | ReactNode", "—"],
-                ["trailingIcon", "IconName | ReactNode", "—"],
-                ["shortcuts", "string[]", "—"],
+                ["label", "ReactNode", "-"],
+                ["icon", "IconName | ReactNode", "-"],
+                ["trailingIcon", "IconName | ReactNode", "-"],
+                ["shortcuts", "string[]", "-"],
                 ["disabled", "boolean", "false"],
                 ["color", "Color", "neutral"],
-                ["href / to", "string", "—"],
-                ["target", "string", "—"],
-                ["click / onClick", "(event) => void", "—"],
-                ["slot", "ReactNode", "—"],
-                ["className / class", "string", "—"],
+                ["href / to", "string", "-"],
+                ["target", "string", "-"],
+                ["click / onClick", "(event) => void", "-"],
+                ["slot", "ReactNode", "-"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

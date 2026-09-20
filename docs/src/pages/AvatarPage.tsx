@@ -93,14 +93,14 @@ export function AvatarPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["src", "string", "—"],
-                ["alt", "string", "—"],
+                ["src", "string", "-"],
+                ["alt", "string", "-"],
                 ["text", "string", "initials from alt"],
-                ["icon", "IconName | ReactNode", "—"],
+                ["icon", "IconName | ReactNode", "-"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["color", "primary | secondary | success | info | warning | error | neutral", "neutral"],
-                ["className / class", "string", "—"],
-                ["ui", "{ root, image, fallback, icon }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ root, image, fallback, icon }", "-"],
                 ["children", "ReactNode", "custom fallback"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>

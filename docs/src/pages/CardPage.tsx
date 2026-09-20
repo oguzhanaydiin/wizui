@@ -11,7 +11,7 @@ export function CardPage() {
           A panel with{" "}
           <code className="text-neutral-800">header</code>,{" "}
           <code className="text-neutral-800">body</code>,{" "}
-          <code className="text-neutral-800">footer</code> — same slots as Modal.{" "}
+          <code className="text-neutral-800">footer</code>. Same slots as Modal.{" "}
           <code className="text-neutral-800">title</code> and{" "}
           <code className="text-neutral-800">description</code> fill the header. Children are the body.
         </p>
@@ -31,7 +31,7 @@ export function CardPage() {
         </WCard>
       </Section>
 
-      <Section title="Slots" description="header, body, footer — Vue named slots. title / children are the defaults.">
+      <Section title="Slots" description="header, body, footer. Vue named slots. title / children are the defaults.">
         <WCard
           header={
             <div className="flex items-center justify-between gap-2">
@@ -125,11 +125,11 @@ export function CardPage() {
                 ["description", "ReactNode", "default header"],
                 ["header", "ReactNode", "title + description"],
                 ["body", "ReactNode", "children"],
-                ["footer", "ReactNode", "—"],
+                ["footer", "ReactNode", "-"],
                 ["children", "ReactNode", "body"],
                 ["variant", "solid | outline | subtle | ghost", "outline"],
-                ["className / class", "string", "—"],
-                ["ui", "{ base, header, title, description, body, footer }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ base, header, title, description, body, footer }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

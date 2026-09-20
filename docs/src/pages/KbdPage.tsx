@@ -109,12 +109,12 @@ export function KbdPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["value", "string", "—"],
+                ["value", "string", "-"],
                 ["color", "primary | secondary | success | info | warning | error | neutral", "neutral"],
                 ["variant", "solid | subtle | outline | ghost | link", "outline"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["children", "ReactNode", "mapped value"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

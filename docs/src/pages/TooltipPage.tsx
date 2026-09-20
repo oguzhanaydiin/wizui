@@ -102,18 +102,18 @@ export function TooltipPage() {
             </thead>
             <tbody className="divide-y divide-neutral-200">
               {[
-                ["text", "ReactNode", "—"],
-                ["kbds", "string[]", "—"],
+                ["text", "ReactNode", "-"],
+                ["kbds", "string[]", "-"],
                 ["trigger / children", "ReactNode", "trigger"],
                 ["content", "ReactNode", "text + kbds"],
-                ["open", "boolean", "—"],
+                ["open", "boolean", "-"],
                 ["defaultOpen", "boolean", "false"],
-                ["onOpenChange", "(open: boolean) => void", "—"],
+                ["onOpenChange", "(open: boolean) => void", "-"],
                 ["placement", "top | right | bottom | left + -start/-end", "top"],
                 ["delayDuration", "number", "200"],
                 ["disabled", "boolean", "false"],
-                ["className / class", "string", "—"],
-                ["ui", "{ trigger, content, text, kbds }", "—"],
+                ["className / class", "string", "-"],
+                ["ui", "{ trigger, content, text, kbds }", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

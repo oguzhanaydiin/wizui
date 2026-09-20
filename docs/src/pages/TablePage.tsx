@@ -84,7 +84,7 @@ function LoadingDemo() {
 }
 
 function ActionsDemo() {
-  const [last, setLast] = useState("—")
+  const [last, setLast] = useState("-")
 
   return (
     <div className="space-y-3">
@@ -145,11 +145,11 @@ export function TablePage() {
   ]}
 />`}</Code>
 
-      <Section title="Usage" description="No columns — keys of the first row become headers.">
+      <Section title="Usage" description="No columns. Keys of the first row become headers.">
         <WTable data={payments} />
       </Section>
 
-      <Section title="Columns" description="accessorKey reads the field. cell renders the row. sortable cycles none → asc → desc.">
+      <Section title="Columns" description="accessorKey reads the field. cell renders the row. sortable cycles none, asc, desc.">
         <WTable data={payments} columns={columns} />
       </Section>
 
@@ -181,7 +181,7 @@ export function TablePage() {
         <WTable data={payments} columns={columns} divided itemsPerPage={3} />
       </Section>
 
-      <Section title="Sizes" description="xs, sm, md, lg, xl — cell padding and type.">
+      <Section title="Sizes" description="xs, sm, md, lg, xl. Cell padding and type.">
         <div className="space-y-4">
           <WTable
             size="sm"
@@ -230,7 +230,7 @@ export function TablePage() {
                 ["sticky", "boolean", "false"],
                 ["size", "xs | sm | md | lg | xl", "md"],
                 ["getRowId", "(row, index) => string", "row.id"],
-                ["className / class", "string", "—"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>

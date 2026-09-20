@@ -150,11 +150,11 @@ export function BadgePage() {
                 ["color", "primary | secondary | success | info | warning | error | neutral", "primary"],
                 ["variant", "solid | subtle | outline | ghost | link", "solid"],
                 ["size", "xs | sm | md | lg | xl", "md"],
-                ["icon", "IconName | ReactNode", "—"],
-                ["trailingIcon", "IconName | ReactNode", "—"],
-                ["leading", "ReactNode", "—"],
-                ["trailing", "ReactNode", "—"],
-                ["className / class", "string", "—"],
+                ["icon", "IconName | ReactNode", "-"],
+                ["trailingIcon", "IconName | ReactNode", "-"],
+                ["leading", "ReactNode", "-"],
+                ["trailing", "ReactNode", "-"],
+                ["className / class", "string", "-"],
               ].map(([prop, type, fallback]) => (
                 <tr key={prop}>
                   <td className="px-3 py-2 font-mono text-xs">{prop}</td>
