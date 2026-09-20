@@ -1,10 +1,14 @@
 export { WAlert, type WAlertProps } from "./components/WAlert"
 export { WAvatar, type WAvatarProps } from "./components/WAvatar"
+export { WAvatarGroup, type WAvatarGroupProps } from "./components/WAvatarGroup"
 export { WBadge, type WBadgeProps } from "./components/WBadge"
 export { WButton, type WButtonProps } from "./components/WButton"
+export { WButtonGroup, type WButtonGroupProps } from "./components/WButtonGroup"
 export { WCard, type WCardProps, type WCardVariant } from "./components/WCard"
 export { WCheckbox, type WCheckboxProps } from "./components/WCheckbox"
+export { WChip, type WChipProps } from "./components/WChip"
 export { WCodeBlock, type WCodeBlockProps, type WCodeBlockVariant } from "./components/WCodeBlock"
+export { WContainer, type WContainerProps } from "./components/WContainer"
 export {
   WDropdown,
   type WDropdownItem,
@@ -15,6 +19,7 @@ export {
 export { WFormField, type WFormFieldProps } from "./components/WFormField"
 export { WInput, type WInputProps } from "./components/WInput"
 export { WKbd, getKbdKey, type KbdKey, type WKbdProps } from "./components/WKbd"
+export { WLink, type WLinkProps } from "./components/WLink"
 export { WModal, type WModalProps } from "./components/WModal"
 export {
   WPagination,
