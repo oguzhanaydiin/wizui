@@ -2,6 +2,7 @@ import type { ReactNode } from "react"
 import { WCodeBlock, WLink } from "wizui"
 
 const nav = [
+  { href: "/accordion", id: "accordion", label: "Accordion" },
   { href: "/alert", id: "alert", label: "Alert" },
   { href: "/avatar", id: "avatar", label: "Avatar" },
   { href: "/avatar-group", id: "avatar-group", label: "Avatar Group" },
@@ -23,8 +24,10 @@ const nav = [
   { href: "/popover", id: "popover", label: "Popover" },
   { href: "/progress", id: "progress", label: "Progress" },
   { href: "/radio-group", id: "radio-group", label: "Radio Group" },
+  { href: "/select", id: "select", label: "Select" },
   { href: "/separator", id: "separator", label: "Separator" },
   { href: "/skeleton", id: "skeleton", label: "Skeleton" },
+  { href: "/slider", id: "slider", label: "Slider" },
   { href: "/slideover", id: "slideover", label: "Slideover" },
   { href: "/switch", id: "switch", label: "Switch" },
   { href: "/table", id: "table", label: "Table" },

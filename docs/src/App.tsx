@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { WizProvider } from "wizui"
 import { DocsLayout } from "./components/DocsLayout.tsx"
+import { AccordionPage } from "./pages/AccordionPage.tsx"
 import { AlertPage } from "./pages/AlertPage.tsx"
 import { AvatarPage } from "./pages/AvatarPage.tsx"
 import { AvatarGroupPage } from "./pages/AvatarGroupPage.tsx"
@@ -22,8 +23,10 @@ import { PaginationPage } from "./pages/PaginationPage.tsx"
 import { PopoverPage } from "./pages/PopoverPage.tsx"
 import { ProgressPage } from "./pages/ProgressPage.tsx"
 import { RadioGroupPage } from "./pages/RadioGroupPage.tsx"
+import { SelectPage } from "./pages/SelectPage.tsx"
 import { SeparatorPage } from "./pages/SeparatorPage.tsx"
 import { SkeletonPage } from "./pages/SkeletonPage.tsx"
+import { SliderPage } from "./pages/SliderPage.tsx"
 import { SlideoverPage } from "./pages/SlideoverPage.tsx"
 import { SwitchPage } from "./pages/SwitchPage.tsx"
 import { TablePage } from "./pages/TablePage.tsx"
@@ -33,6 +36,7 @@ import { TooltipPage } from "./pages/TooltipPage.tsx"
 
 const pages = {
   "/": ButtonPage,
+  "/accordion": AccordionPage,
   "/avatar": AvatarPage,
   "/avatar-group": AvatarGroupPage,
   "/modal": ModalPage,
@@ -48,12 +52,14 @@ const pages = {
   "/container": ContainerPage,
   "/switch": SwitchPage,
   "/radio-group": RadioGroupPage,
+  "/select": SelectPage,
   "/form-field": FormFieldPage,
   "/dropdown": DropdownPage,
   "/separator": SeparatorPage,
   "/kbd": KbdPage,
   "/link": LinkPage,
   "/skeleton": SkeletonPage,
+  "/slider": SliderPage,
   "/slideover": SlideoverPage,
   "/table": TablePage,
   "/pagination": PaginationPage,
@@ -65,6 +71,7 @@ const pages = {
 
 const current = {
   "/": "button",
+  "/accordion": "accordion",
   "/avatar": "avatar",
   "/avatar-group": "avatar-group",
   "/modal": "modal",
@@ -80,12 +87,14 @@ const current = {
   "/container": "container",
   "/switch": "switch",
   "/radio-group": "radio-group",
+  "/select": "select",
   "/form-field": "form-field",
   "/dropdown": "dropdown",
   "/separator": "separator",
   "/kbd": "kbd",
   "/link": "link",
   "/skeleton": "skeleton",
+  "/slider": "slider",
   "/slideover": "slideover",
   "/table": "table",
   "/pagination": "pagination",
