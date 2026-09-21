@@ -1,3 +1,4 @@
+export { WAccordion, type WAccordionItem, type WAccordionProps } from "./components/WAccordion"
 export { WAlert, type WAlertProps } from "./components/WAlert"
 export { WAvatar, type WAvatarProps } from "./components/WAvatar"
 export { WAvatarGroup, type WAvatarGroupProps } from "./components/WAvatarGroup"
@@ -37,6 +38,7 @@ export {
   type WRadioGroupProps,
   type WRadioItem,
 } from "./components/WRadioGroup"
+export { WSelect, type WSelectItem, type WSelectProps } from "./components/WSelect"
 export {
   WSeparator,
   type WSeparatorOrientation,
@@ -45,6 +47,7 @@ export {
   type WSeparatorType,
 } from "./components/WSeparator"
 export { WSkeleton, type WSkeletonProps } from "./components/WSkeleton"
+export { WSlider, type WSliderProps } from "./components/WSlider"
 export { WSlideover, type WSlideoverProps, type WSlideoverSide } from "./components/WSlideover"
 export { WSwitch, type WSwitchProps } from "./components/WSwitch"
 export {
