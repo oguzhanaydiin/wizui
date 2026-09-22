@@ -6,6 +6,7 @@ import { AlertPage } from "./pages/AlertPage.tsx"
 import { AvatarPage } from "./pages/AvatarPage.tsx"
 import { AvatarGroupPage } from "./pages/AvatarGroupPage.tsx"
 import { BadgePage } from "./pages/BadgePage.tsx"
+import { BreadcrumbPage } from "./pages/BreadcrumbPage.tsx"
 import { ButtonPage } from "./pages/ButtonPage.tsx"
 import { ButtonGroupPage } from "./pages/ButtonGroupPage.tsx"
 import { CardPage } from "./pages/CardPage.tsx"
@@ -30,6 +31,7 @@ import { SliderPage } from "./pages/SliderPage.tsx"
 import { SlideoverPage } from "./pages/SlideoverPage.tsx"
 import { SwitchPage } from "./pages/SwitchPage.tsx"
 import { TablePage } from "./pages/TablePage.tsx"
+import { TabsPage } from "./pages/TabsPage.tsx"
 import { TextareaPage } from "./pages/TextareaPage.tsx"
 import { ToastPage } from "./pages/ToastPage.tsx"
 import { TooltipPage } from "./pages/TooltipPage.tsx"
@@ -41,6 +43,7 @@ const pages = {
   "/avatar-group": AvatarGroupPage,
   "/modal": ModalPage,
   "/badge": BadgePage,
+  "/breadcrumb": BreadcrumbPage,
   "/alert": AlertPage,
   "/button-group": ButtonGroupPage,
   "/card": CardPage,
@@ -62,6 +65,7 @@ const pages = {
   "/slider": SliderPage,
   "/slideover": SlideoverPage,
   "/table": TablePage,
+  "/tabs": TabsPage,
   "/pagination": PaginationPage,
   "/popover": PopoverPage,
   "/progress": ProgressPage,
@@ -76,6 +80,7 @@ const current = {
   "/avatar-group": "avatar-group",
   "/modal": "modal",
   "/badge": "badge",
+  "/breadcrumb": "breadcrumb",
   "/alert": "alert",
   "/button-group": "button-group",
   "/card": "card",
@@ -97,6 +102,7 @@ const current = {
   "/slider": "slider",
   "/slideover": "slideover",
   "/table": "table",
+  "/tabs": "tabs",
   "/pagination": "pagination",
   "/popover": "popover",
   "/progress": "progress",

@@ -3,6 +3,7 @@ export { WAlert, type WAlertProps } from "./components/WAlert"
 export { WAvatar, type WAvatarProps } from "./components/WAvatar"
 export { WAvatarGroup, type WAvatarGroupProps } from "./components/WAvatarGroup"
 export { WBadge, type WBadgeProps } from "./components/WBadge"
+export { WBreadcrumb, type WBreadcrumbItem, type WBreadcrumbProps } from "./components/WBreadcrumb"
 export { WButton, type WButtonProps } from "./components/WButton"
 export { WButtonGroup, type WButtonGroupProps } from "./components/WButtonGroup"
 export { WCard, type WCardProps, type WCardVariant } from "./components/WCard"
@@ -56,6 +57,7 @@ export {
   type WTableProps,
   type WTableSort,
 } from "./components/WTable"
+export { WTabs, type WTabsItem, type WTabsProps, type WTabsVariant } from "./components/WTabs"
 export { WTextarea, type WTextareaProps, type WTextareaResize } from "./components/WTextarea"
 export { WToast, type WToastProps } from "./components/WToast"
 export { WTooltip, type WTooltipProps } from "./components/WTooltip"
