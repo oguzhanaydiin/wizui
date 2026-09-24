@@ -23,6 +23,8 @@ export { WInput, type WInputProps } from "./components/WInput"
 export { WKbd, getKbdKey, type KbdKey, type WKbdProps } from "./components/WKbd"
 export { WLink, type WLinkProps } from "./components/WLink"
 export { WModal, type WModalProps } from "./components/WModal"
+export { WNav, type WNavItem, type WNavProps, type WNavVariant } from "./components/WNav"
+export { WNavMenu, type WNavMenuProps } from "./components/WNavMenu"
 export {
   WPagination,
   type WPaginationItem,
