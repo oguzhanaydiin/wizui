@@ -5,7 +5,7 @@ function isExternalHref(href: string) {
   return /^(https?:|mailto:|tel:)/i.test(href)
 }
 
-function pathActive(href: string, exact?: boolean) {
+export function isPathActive(href: string, exact?: boolean) {
   if (typeof window === "undefined") return false
   const current = window.location.pathname.replace(/\/$/, "") || "/"
   const target = href.replace(/\/$/, "") || "/"
@@ -58,7 +58,7 @@ export function WLink({
 }: WLinkProps) {
   const dest = href ?? to
   const external = dest != null && (target === "_blank" || isExternalHref(dest))
-  const isActive = !disabled && dest != null && (active ?? (!external && pathActive(dest, exact)))
+  const isActive = !disabled && dest != null && (active ?? (!external && isPathActive(dest, exact)))
   const resolvedRel =
     rel ?? (target === "_blank" || (external && dest != null && /^https?:/i.test(dest)) ? "noopener noreferrer" : undefined)
   const classes = cx(

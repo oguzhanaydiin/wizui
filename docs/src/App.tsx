@@ -20,6 +20,8 @@ import { InputPage } from "./pages/InputPage.tsx"
 import { KbdPage } from "./pages/KbdPage.tsx"
 import { LinkPage } from "./pages/LinkPage.tsx"
 import { ModalPage } from "./pages/ModalPage.tsx"
+import { NavPage } from "./pages/NavPage.tsx"
+import { NavMenuPage } from "./pages/NavMenuPage.tsx"
 import { PaginationPage } from "./pages/PaginationPage.tsx"
 import { PopoverPage } from "./pages/PopoverPage.tsx"
 import { ProgressPage } from "./pages/ProgressPage.tsx"
@@ -42,6 +44,8 @@ const pages = {
   "/avatar": AvatarPage,
   "/avatar-group": AvatarGroupPage,
   "/modal": ModalPage,
+  "/nav": NavPage,
+  "/nav-menu": NavMenuPage,
   "/badge": BadgePage,
   "/breadcrumb": BreadcrumbPage,
   "/alert": AlertPage,
@@ -73,43 +77,6 @@ const pages = {
   "/tooltip": TooltipPage,
 } as const
 
-const current = {
-  "/": "button",
-  "/accordion": "accordion",
-  "/avatar": "avatar",
-  "/avatar-group": "avatar-group",
-  "/modal": "modal",
-  "/badge": "badge",
-  "/breadcrumb": "breadcrumb",
-  "/alert": "alert",
-  "/button-group": "button-group",
-  "/card": "card",
-  "/chip": "chip",
-  "/input": "input",
-  "/textarea": "textarea",
-  "/checkbox": "checkbox",
-  "/code-block": "code-block",
-  "/container": "container",
-  "/switch": "switch",
-  "/radio-group": "radio-group",
-  "/select": "select",
-  "/form-field": "form-field",
-  "/dropdown": "dropdown",
-  "/separator": "separator",
-  "/kbd": "kbd",
-  "/link": "link",
-  "/skeleton": "skeleton",
-  "/slider": "slider",
-  "/slideover": "slideover",
-  "/table": "table",
-  "/tabs": "tabs",
-  "/pagination": "pagination",
-  "/popover": "popover",
-  "/progress": "progress",
-  "/toast": "toast",
-  "/tooltip": "tooltip",
-} as const
-
 function pathOf() {
   return window.location.pathname.replace(/\/$/, "") || "/"
 }
@@ -127,11 +94,10 @@ export default function App() {
   }, [])
 
   const Page = path in pages ? pages[path as keyof typeof pages] : pages["/"]
-  const nav = path in current ? current[path as keyof typeof current] : "button"
 
   return (
     <WizProvider>
-      <DocsLayout current={nav}>
+      <DocsLayout>
         <Page />
       </DocsLayout>
     </WizProvider>

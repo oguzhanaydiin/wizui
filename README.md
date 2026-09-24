@@ -27,7 +27,7 @@ Same props everywhere: `color`, `variant`, `size`, `icon`, `className`.
 
 ## Components
 
-Button · Badge · Alert · Avatar · Card · Input · Textarea · Checkbox · Switch · Radio Group · Form Field · Modal · Dropdown · Popover · Tooltip · Toast · Slideover · Progress · Separator · Kbd · Skeleton · Table · Pagination · Code Block · Link · Container · Button Group · Avatar Group · Chip · Accordion · Slider · Select · Breadcrumb · Tabs
+Button · Badge · Alert · Avatar · Card · Input · Textarea · Checkbox · Switch · Radio Group · Form Field · Modal · Dropdown · Popover · Tooltip · Toast · Slideover · Progress · Separator · Kbd · Skeleton · Table · Pagination · Code Block · Link · Container · Button Group · Avatar Group · Chip · Accordion · Slider · Select · Breadcrumb · Tabs · Nav · Nav Menu
 
 ## Docs
 
