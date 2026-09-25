@@ -1,74 +1,6 @@
 import type { ReactNode } from "react"
-import { WCodeBlock, WLink, WNav, type WNavItem } from "wizui"
-
-const nav: WNavItem[] = [
-  {
-    type: "label",
-    label: "Element",
-    children: [
-      { href: "/", label: "Button" },
-      { href: "/button-group", label: "Button Group" },
-      { href: "/badge", label: "Badge" },
-      { href: "/chip", label: "Chip" },
-      { href: "/alert", label: "Alert" },
-      { href: "/avatar", label: "Avatar" },
-      { href: "/avatar-group", label: "Avatar Group" },
-      { href: "/card", label: "Card" },
-      { href: "/container", label: "Container" },
-      { href: "/separator", label: "Separator" },
-      { href: "/skeleton", label: "Skeleton" },
-      { href: "/progress", label: "Progress" },
-      { href: "/kbd", label: "Kbd" },
-      { href: "/code-block", label: "Code Block" },
-    ],
-  },
-  {
-    type: "label",
-    label: "Form",
-    children: [
-      { href: "/input", label: "Input" },
-      { href: "/textarea", label: "Textarea" },
-      { href: "/form-field", label: "Form Field" },
-      { href: "/checkbox", label: "Checkbox" },
-      { href: "/switch", label: "Switch" },
-      { href: "/radio-group", label: "Radio Group" },
-      { href: "/select", label: "Select" },
-      { href: "/slider", label: "Slider" },
-    ],
-  },
-  {
-    type: "label",
-    label: "Overlay",
-    children: [
-      { href: "/modal", label: "Modal" },
-      { href: "/slideover", label: "Slideover" },
-      { href: "/popover", label: "Popover" },
-      { href: "/tooltip", label: "Tooltip" },
-      { href: "/dropdown", label: "Dropdown" },
-      { href: "/toast", label: "Toast" },
-    ],
-  },
-  {
-    type: "label",
-    label: "Navigation",
-    children: [
-      { href: "/link", label: "Link" },
-      { href: "/nav", label: "Nav" },
-      { href: "/nav-menu", label: "Nav Menu" },
-      { href: "/breadcrumb", label: "Breadcrumb" },
-      { href: "/tabs", label: "Tabs" },
-      { href: "/pagination", label: "Pagination" },
-    ],
-  },
-  {
-    type: "label",
-    label: "Data",
-    children: [
-      { href: "/table", label: "Table" },
-      { href: "/accordion", label: "Accordion" },
-    ],
-  },
-]
+import { WCodeBlock, WLink, WNav } from "wizui"
+import { docsNav } from "../nav"
 
 export function DocsLayout({ children }: { children: ReactNode }) {
   return (
@@ -77,11 +9,13 @@ export function DocsLayout({ children }: { children: ReactNode }) {
         <WLink raw href="/" className="px-2 text-sm font-semibold tracking-tight text-neutral-900">
           wizui
         </WLink>
-        <WNav className="mt-6" color="neutral" items={nav} />
+        <WNav className="mt-6" color="neutral" items={docsNav} />
       </aside>
       <div className="md:pl-56">
         <header className="border-b border-neutral-200 px-6 py-3 md:hidden">
-          <span className="text-sm font-semibold">wizui</span>
+          <WLink raw href="/" className="text-sm font-semibold">
+            wizui
+          </WLink>
         </header>
         <div className="mx-auto max-w-3xl px-6 py-10">{children}</div>
       </div>
