@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { WizProvider } from "wizui"
 import { DocsLayout } from "./components/DocsLayout.tsx"
+import { HomePage } from "./pages/HomePage.tsx"
 import { AccordionPage } from "./pages/AccordionPage.tsx"
 import { AlertPage } from "./pages/AlertPage.tsx"
 import { AvatarPage } from "./pages/AvatarPage.tsx"
@@ -39,7 +40,7 @@ import { ToastPage } from "./pages/ToastPage.tsx"
 import { TooltipPage } from "./pages/TooltipPage.tsx"
 
 const pages = {
-  "/": ButtonPage,
+  "/button": ButtonPage,
   "/accordion": AccordionPage,
   "/avatar": AvatarPage,
   "/avatar-group": AvatarGroupPage,
@@ -81,25 +82,45 @@ function pathOf() {
   return window.location.pathname.replace(/\/$/, "") || "/"
 }
 
+function scrollToHash() {
+  const id = window.location.hash.slice(1)
+  if (!id) {
+    window.scrollTo(0, 0)
+    return
+  }
+  requestAnimationFrame(() => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+  })
+}
+
 export default function App() {
   const [path, setPath] = useState(pathOf)
 
   useEffect(() => {
     function sync() {
       setPath(pathOf())
-      window.scrollTo(0, 0)
+      scrollToHash()
     }
     window.addEventListener("popstate", sync)
     return () => window.removeEventListener("popstate", sync)
   }, [])
 
-  const Page = path in pages ? pages[path as keyof typeof pages] : pages["/"]
+  useEffect(() => {
+    scrollToHash()
+  }, [path])
+
+  const home = path === "/"
+  const Page = home ? HomePage : path in pages ? pages[path as keyof typeof pages] : ButtonPage
 
   return (
     <WizProvider>
-      <DocsLayout>
+      {home ? (
         <Page />
-      </DocsLayout>
+      ) : (
+        <DocsLayout>
+          <Page />
+        </DocsLayout>
+      )}
     </WizProvider>
   )
 }
